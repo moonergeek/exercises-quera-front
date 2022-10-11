@@ -1,0 +1,170 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Sneakers</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/images/logo.svg" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item" id="First-item">
+              <a class="nav-link" aria-current="page" href="#">Collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Men</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Woman</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button
+              type="button"
+              class="btn"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <img src="/images/icon-cart.svg" alt="" />
+              <span id="store-number"></span>
+            </button>
+            <img
+              src="/images/image-avatar.png"
+              alt="avatar"
+              width="45"
+              id="avatar"
+            />
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Header -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Cart</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="modal"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <section>
+      <div class="wrapper">
+        <div class="one">
+          <div class="container-slidershow">
+            <div class="sliders">
+              <img
+                src="/images/image-product-1.jpg"
+                style="width: 100%"
+                class="slider-image"
+              />
+            </div>
+            <div class="sliders">
+              <img
+                src="/images/image-product-2.jpg"
+                style="width: 100%"
+                class="slider-image"
+              />
+            </div>
+            <div class="sliders">
+              <img
+                src="/images/image-product-3.jpg"
+                style="width: 100%"
+                class="slider-image"
+              />
+            </div>
+            <a class="prev" onclick="plusSlides(-1)"
+              ><img src="/images/icon-previous.svg" alt=""
+            /></a>
+            <a class="next" onclick="plusSlides(1)"
+              ><img src="/images/icon-next.svg" alt=""
+            /></a>
+          </div>
+        </div>
+
+        <div class="two">
+          <p class="orange">SNEAKERS COMPANY</p>
+          <h3 class="bold-font">
+            Fall Limited Edition<br />
+            Sneakers
+          </h3>
+          <br />
+          <p>
+            These low-profile sneakers are your prtfect casual wear companion<br />
+            Featurin a duraable rubber outer sale theyll winstand
+            <br />everything the weather can offer
+          </p>
+          <h3 id="price">$125.00 <span id="off">50%</span></h3>
+
+          <p style="text-decoration: line-through">$250.00</p>
+          <div>
+            <button class="btn" type="button" onclick="mines()">
+              <img src="/images/icon-minus.svg" alt="" />
+            </button>
+            <span id="number">1</span>
+            <button class="btn" type="button" onclick="plus()">
+              <img src="/images/icon-plus.svg" alt="" />
+            </button>
+            <button class="btn" id="addBtn" type="button" onclick="addCart()">
+              <img src="/images/icon-cart.svg" alt="" /> Add To Card
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="main.js"></script>
+</html>
