@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon-32x32.png" />
+    <title>Sneakers</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <!--================= burger nav ================= -->
+        <div class="navbar__burger">
+          <img src="../images/icon-menu.svg" alt="menu" onclick="openNav()" />
+        </div>
+        <a href="./index.html" class="navbar__logo">
+          <img src="../images/logo.svg" alt="logo" />
+        </a>
+        <!--================= navbar links================= -->
+        <ul class="navbar__links">
+          <img
+            src="../images/icon-close.svg"
+            class="navbar__close"
+            width="15px"
+            onclick="closeNav()"
+          />
+          <li><a href="#collections" class="navbar__item">Collections</a></li>
+          <li><a href="#men" class="navbar__item">Men</a></li>
+          <li><a href="#women" class="navbar__item">Women</a></li>
+          <li><a href="#about" class="navbar__item">About</a></li>
+          <li><a href="#contact" class="navbar__item">contact</a></li>
+        </ul>
+      </nav>
+      <!--================= right nav =================-->
+      <div class="acount">
+        <div class="acount__cart">
+          <img src="../images/icon-cart.svg" alt="cart" onclick="cartList()" />
+          <div class="cart__number"></div>
+        </div>
+        <div class="account__profile">
+          <img
+            src="../images/image-avatar.png"
+            alt="avatar"
+            width="35px"
+            class="profile__avatar"
+          />
+        </div>
+      </div>
+    </header>
+    <main class="product">
+      <!--================= basket shopping cart =================-->
+      <div class="cart">
+        <header class="cart__header">Cart</header>
+        <div class="cart__body">
+          <div class="cart__body__text">Your cart is empty.</div>
+          <button class="cart__button">Checkout</button>
+        </div>
+      </div>
+      <!--================= image gallery =================-->
+      <section class="product__images">
+        <div class="images__main">
+          <img
+            src="../images/image-product-1.jpg"
+            alt="image"
+            class="main__image"
+            width="100%"
+            onclick="openModal(this.src)"
+          />
+          <div class="main__slides">
+            <span
+              id="previous"
+              class="slides__button"
+              onclick="prevImage(this)"
+            >
+              <img
+                src="../images/icon-previous.svg"
+                alt="previousImage"
+                width="11px"
+              />
+            </span>
+            <span id="next" class="slides__button" onclick="nextImage(this)">
+              <img src="../images/icon-next.svg" alt="nextImage" width="11px" />
+            </span>
+          </div>
+        </div>
+        <div class="product__images__thumbnail">
+          <img
+            src="../images/image-product-1-thumbnail.jpg"
+            alt="image"
+            width="90px"
+            class="images__tumbnail images__tumbnail--active"
+            onclick="showImage(this)"
+          />
+          <img
+            src="../images/image-product-2-thumbnail.jpg"
+            alt="image"
+            width="90px"
+            class="images__tumbnail"
+            onclick="showImage(this)"
+          />
+          <img
+            src="../images/image-product-3-thumbnail.jpg"
+            alt="image"
+            width="90px"
+            class="images__tumbnail"
+            onclick="showImage(this)"
+          />
+          <img
+            src="../images/image-product-4-thumbnail.jpg"
+            alt="image"
+            width="90px"
+            class="images__tumbnail"
+            onclick="showImage(this)"
+          />
+        </div>
+      </section>
+      <!--================= product details =================-->
+      <section class="product__info">
+        <p class="info__company">SNEAKER COMPANY</p>
+        <p class="info__title">Fall Limited Edition Sneakers</p>
+        <p class="info__description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
+        </p>
+        <div class="info__price">
+          <div class="price__sale">
+            <span class="sale__newprice">$125.00</span>
+            <span class="sale__discount">50%</span>
+          </div>
+          <div class="price__original">$250.00</div>
+        </div>
+        <div class="add">
+          <div class="button add__count">
+            <img
+              src="../images/icon-minus.svg"
+              alt="minus"
+              class="count__button"
+              id="minus__button"
+              onclick="removeFromCart(this)"
+            />
+            <span class="counter">0</span>
+            <img
+              src="../images/icon-plus.svg"
+              alt="plus"
+              class="count__button"
+              id="plus__button"
+              onclick="addToCart(this)"
+            />
+          </div>
+          <div class="add__button--width">
+            <button class="button add__button" onclick="addToCart(this)">
+              <img
+                src="../images/icon-cart.svg"
+                alt="cart"
+                class="cart__image"
+                width="20px"
+              />
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--================= modal =================-->
+    <div class="productModal">
+      <div class="modal__content">
+        <span class="modal__close">
+          <img src="../images/icon-close.svg" alt="close" />
+        </span>
+        <section class="product__images product__images--center">
+          <div class="images__main images__main--modal">
+            <img alt="image" class="main__image__modal" width="100%" />
+            <div class="main__slides main__slides__modal">
+              <span
+                id="previous"
+                class="slides__button"
+                onclick="prevImage(this)"
+              >
+                <img
+                  src="../images/icon-previous.svg"
+                  alt="previousImage"
+                  width="11px"
+                />
+              </span>
+              <span id="next" class="slides__button" onclick="nextImage(this)">
+                <img
+                  src="../images/icon-next.svg"
+                  alt="nextImage"
+                  width="11px"
+                />
+              </span>
+            </div>
+          </div>
+          <div
+            class="product__images__thumbnail product__images__thumbnail--center"
+          >
+            <img
+              src="../images/image-product-1-thumbnail.jpg"
+              alt="image"
+              width="90px"
+              class="images__tumbnail"
+              onclick="showImage(this)"
+            />
+            <img
+              src="../images/image-product-2-thumbnail.jpg"
+              alt="image"
+              width="90px"
+              class="images__tumbnail"
+              onclick="showImage(this)"
+            />
+            <img
+              src="../images/image-product-3-thumbnail.jpg"
+              alt="image"
+              width="90px"
+              class="images__tumbnail"
+              onclick="showImage(this)"
+            />
+            <img
+              src="../images/image-product-4-thumbnail.jpg"
+              alt="image"
+              width="90px"
+              class="images__tumbnail"
+              onclick="showImage(this)"
+            />
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
