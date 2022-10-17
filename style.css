@@ -1,0 +1,444 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* body */
+body{
+  height: 100vh;
+  width: 100vw;
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.container-main{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+
+/* navBar*/
+.navbar{
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  position:relative;
+}
+
+#navbarUl{
+  position: absolute;
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.navbarItemList{
+  position: absolute;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+#navbarModalBody{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+ul{
+  position: absolute;
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+
+li{
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.badge{
+  position: relative;
+  top: -32px;
+  left: 32px;
+  border: 1px solid rgba(247, 113, 4, 0.925);
+  border-radius: 50%;
+  background-color: rgba(247, 113, 4, 0.925);
+ }
+
+#avatar-img:hover{
+  border: 3px solid rgba(247, 113, 4, 0.925);
+  border-radius: 50%;
+}
+
+/* Images container*/
+.container-card{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  height: 100%;
+  width: 50%;
+  margin-top: 50px;
+  margin-left: 60px;
+}
+
+#smallImgDiv{
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+}
+
+.card{
+  border-radius: 10px;
+}
+
+.page,
+.clone-small-img,
+.small-cart-img{
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.img-small{
+  display: flex;
+  flex-direction: row;
+  width: 25;
+  justify-content: space-between;
+}
+
+.modal-small-img{
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-body-img{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.modal-small-img{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.modal-large-img{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.modalIcon,
+.pageIcon{
+  background-color: white;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+/* product Info container*/
+.container-product{
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+.minusPluAddDiv{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+ }
+ 
+.addNumber{
+  background-color: rgba(235, 243, 243, 0.979);
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  width: 100px;
+  align-items: center;
+ }
+ 
+.productInfo{
+  height: 100px;
+  display: flex;
+  flex-direction:column;
+  gap: 20px;
+}
+
+#sold{
+  font-size: x-large;
+  font-weight: bolder;
+  color: black;
+}
+ 
+ #discount{
+  display: flex;
+  border-radius: 5px;
+  background-color: rgb(243, 204, 206);
+  color: rgba(247, 113, 4, 0.925);
+  font-size: small;
+  justify-content: center;
+  padding-left: start;
+  height: 18px ;
+  width: 35px ;
+  align-items: center;
+ }
+
+ #price{
+  color: gray;
+  font-size: 13px;
+ }
+
+ #priceSpan{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+ }
+
+
+/* cart */
+#addCartButtonDesktop,
+#addCartButtonMobile{
+  background-color: rgba(247, 113, 4, 0.925);
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 40px;
+  color: white;
+  font-size: small;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+ }
+ 
+ #modal-body-cart{
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-header-cart{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#titleCart{
+  color: gray;
+  font-size: 15px;
+}
+
+#result{
+  color: gray;
+  font-size: 8;
+  font-weight: bold;
+}
+
+#priceCart{
+  font-weight: bold;
+  color: black;
+  font-size: 8;
+}
+
+#cart-body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width:300px;
+  margin-left: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+#saleSpan{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#cartButtonModal{
+  background-color: rgba(247, 113, 4, 0.925);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: small;
+  width: 250px;
+  height: 35px;
+}
+
+#modal-style-cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+/*mobile state*/ 
+@media screen and (max-width :500px){
+  .navbar{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 40px;
+  }
+
+  #avatar-img{
+    height: 40px;
+    width: 40px;
+  }
+
+  .largeDesk{
+    display: none;
+  }
+
+  #largeImgCardInPage{
+    display: none;
+  }
+
+  .img-small{
+    display: none;
+  }
+
+  #mobileDiv{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+  .left{
+    position: absolute;
+    left:20px;
+    z-index: 2;
+  }
+
+  .right{
+    position: absolute;
+    right: 30px;
+    z-index: 2;
+
+  }
+
+  .container-main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container-card,
+  .container-product{
+    width: 100%;
+  }
+
+  .container-card{
+    margin-top: 0;
+    position: absolute;
+    height: 30vh;
+  }
+
+  #mobileDiv{
+    position: absolute;
+    width: 100vw;
+    right: 0;
+    margin-top: 0;
+    
+  }
+
+  .container-product{
+    margin-top: 240px;
+  }
+
+  .priceInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .minusPluAddDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .addNumber,
+  #addCartButtonMobile{
+    width: 85vw;
+  }
+
+  .cartButtonDesktop{
+    display: none;
+  }
+
+  #addCartButtonDesktop{
+    display: none;
+  }
+
+  #price{
+    text-decoration-line: line-through;
+  }
+
+  #cartModalDialog{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 30px;
+    z-index: 10040;
+    overflow: auto;
+    overflow-y: auto;
+   }
+}
+
+
+/*desktop state */
+@media screen and (min-width :600px){
+  .mobile{
+    display: none;
+  }
+
+  .cartButtonMobile{
+    display: none;
+  }
+
+  #addCartButtonMobile{
+    display: none;
+  }
+
+  #cartModalDialog{
+    position: absolute;
+    top: 90px;
+    right: 0;
+    bottom: 0;
+    left: 65vw;
+    z-index: 10040;
+    overflow: auto;
+    overflow-y: auto;
+   }
+  
+}
